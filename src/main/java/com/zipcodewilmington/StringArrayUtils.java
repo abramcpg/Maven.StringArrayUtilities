@@ -100,8 +100,8 @@ public class StringArrayUtils {
      */ // TODO
     public static int getNumberOfOccurrences(String[] array, String value) {
         int count = 0;
-        for(String input: array){
-            if(value.equals(value)) count++;
+        for (int i = 0; i < array.length; i++) {
+            if(array[i].contains(value))count++;
         }
         return count;
     }
@@ -146,7 +146,7 @@ public class StringArrayUtils {
      */ // TODO
     public static String[] packConsecutiveDuplicates(String[] array) {
         String output = "";
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if(array[i].equals(array[i-1])) {
                 output += array[i - 1];
             }else{
